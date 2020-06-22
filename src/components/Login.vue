@@ -1,27 +1,31 @@
 <template>
-  <div class="login_container">
-    <div class="login_box">
-      <div class="avatar_box">
-        <img src="../assets/logo.png" alt />
-      </div>
-      <el-form :model="loginForm" :rules="rules" ref="loginFormRef">
-        <el-form-item prop="user">
-          <el-input prefix-icon="el-icon-user" v-model="loginForm.user" autocomplete="off"></el-input>
-        </el-form-item>
-        <el-form-item prop="pass">
-          <el-input
-            type="password"
-            prefix-icon="el-icon-lock"
-            v-model="loginForm.pass"
-            autocomplete="off"
-          ></el-input>
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" @click="login('loginFormRef')">提交</el-button>
-        </el-form-item>
-      </el-form>
+    <div class="login_container">
+        <div class="login_box">
+            <div class="avatar_box">
+                <img src="../assets/logo.png" alt />
+            </div>
+            <el-form :model="loginForm" :rules="rules" ref="loginFormRef">
+                <el-form-item prop="user">
+                    <el-input
+                        prefix-icon="el-icon-user"
+                        v-model="loginForm.user"
+                        autocomplete="off"
+                    ></el-input>
+                </el-form-item>
+                <el-form-item prop="pass">
+                    <el-input
+                        type="password"
+                        prefix-icon="el-icon-lock"
+                        v-model="loginForm.pass"
+                        autocomplete="off"
+                    ></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" @click="login('loginFormRef')">提交</el-button>
+                </el-form-item>
+            </el-form>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
